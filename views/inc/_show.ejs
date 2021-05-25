@@ -1,0 +1,15 @@
+<% for(let i=0;i<users.length;i++){ 
+    let next = (users.length-1 != i) ? users[i+1]._id : 0
+    let pre = (0 != i) ? users[i-1]._id : 0
+    %>
+    <tr>
+        <td>
+            <%=i+1%>
+        </td>
+        <td>
+            <a href="/user_data?id=<%=users[i]._id%>&next=<%= next %>&pre=<%= pre %>">
+                <%=users[i].name%>
+            </a>
+        </td>
+    </tr>
+    <% } %>

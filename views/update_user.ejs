@@ -1,0 +1,67 @@
+<!-- include header -->
+<%- include('inc/_header') %>
+    <!-- /include header -->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/userList"><i class="fas fa-angle-double-left"></i> All Users</a>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">User Data</h2>
+                <span class="text-light">Data of the selected account</span>
+            </div>
+
+            <!-- form handling -->
+            <form method="post" id="update_user">
+                <div class="new_user">
+                    <div class="form-group">
+                        <label for="name" class="text-light">Name</label>
+                        <input type="hidden" name="id" value="<%= user._id %>">
+                        <input type="text" name="name" value="<%= user.name %>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="age" class="text-light">Age</label>
+                        <input type="text" name="age" value="<%= user.age %>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="Dob" class="text-light">Date Of Birth</label>
+                        <input type="text" name="Dob" value="<%= user.Dob %>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName" class="text-light">First Name</label>
+                        <input type="text" name="firstName" value="<%= user.firstName %>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" class="text-light">Last Name</label>
+                        <input type="text" name="lastName" value="<%= user.lastName %>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="address1" class="text-light">Address 1</label>
+                        <input type="text" name="address1" value="<%= user.more.address1 %>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="address2" class="text-light">Address 2</label>
+                        <input type="text" name="address2" value="<%= user.more.address2 %>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="address3" class="text-light">Address 3</label>
+                        <input type="text" name="address3" value="<%= user.more.address3 %>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="text-light">Phone</label>
+                        <input type="text" name="phone" value="<%= user.more.phone %>" readonly>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- /Main Site -->
+
+    <!-- include footer -->
+    <%- include('inc/_footer') %>
+        <!-- /include footer -->
